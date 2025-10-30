@@ -1,0 +1,32 @@
+package it.unimib.flexfit.util;
+public class Constants {
+    public static final String EXERCISES_API_BASE_URL = "https://api.github.com/repos/";
+    public static final String EXERCISES_JSON_URL = "yuhonas/free-exercise-db/main/dist/exercises.json";
+    public static final String EXERCISES_IMAGES_BASE_URL = "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/";
+    public static final String CATEGORY_CARDIO = "cardio";
+    public static final String CATEGORY_STRENGTH = "strength";
+    public static final String CATEGORY_STRETCHING = "stretching";
+    public static final String CATEGORY_POWERLIFTING = "powerlifting";
+    public static final String CATEGORY_STRONGMAN = "strongman";
+    public static final String CATEGORY_PLYOMETRICS = "plyometrics";
+    public static final String DATABASE_NAME = "flexfit_database";
+    public static final int DATABASE_VERSION = 3;
+    public static final String SHARED_PREFERENCES_NAME = "flexfit_preferences";
+    public static final String SHARED_PREFERENCES_COUNTRY_OF_INTEREST = "country_of_interest";
+    public static final String EXERCISE_ID_KEY = "exercise_id";
+    public static final String CATEGORY_ID_KEY = "category_id";
+    public static final String FIREBASE_USERS_COLLECTION = "users";
+    public static final String FIREBASE_FAVORITE_EXERCISES_COLLECTION = "favoriteExercises";
+    public static final int REQUEST_CODE_LOGIN = 1001;
+    public static final int REQUEST_CODE_REGISTER = 1002;
+    public static final int SUCCESSFUL_RESULT = 200;
+    public static final int INTERNAL_SERVER_ERROR = 500;
+    public static final String UNEXPECTED_ERROR = "unexpected_error";
+    public static final String INVALID_USER_ERROR = "invalid_user_error";
+    public static final String INVALID_CREDENTIALS_ERROR = "invalid_credentials_error";
+    public static final String USER_COLLISION_ERROR = "user_collision_error";
+    public static final String WEAK_PASSWORD_ERROR = "weak_password_error";
+    public static final String MALFORMED_EMAIL_ERROR = "malformed_email_error";
+    public static final String NETWORK_CONNECTION_ERROR = "network_connection_error";
+    public static final String AUTHENTICATION_ERROR = "authentication_error";
+}

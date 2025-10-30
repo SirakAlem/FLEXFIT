@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    app:strokeWidth="1dp"
+    app:strokeColor="@color/primary_200">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Workout Icon -->
+        <ImageView
+            android:id="@+id/workout_icon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_fitness_center"
+            android:tint="@color/colorPrimary"
+            android:background="@drawable/circle_background"
+            android:backgroundTint="@color/primary_100"
+            android:padding="12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Workout Name -->
+        <TextView
+            android:id="@+id/workout_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/primary_800"
+            android:maxLines="1"
+            android:ellipsize="end"
+            tools:text="Push Day Workout"
+            app:layout_constraintEnd_toStartOf="@+id/favorite_button"
+            app:layout_constraintStart_toEndOf="@+id/workout_icon"
+            app:layout_constraintTop_toTopOf="@+id/workout_icon" />
+
+        <!-- Workout Description -->
+        <TextView
+            android:id="@+id/workout_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:textSize="14sp"
+            android:textColor="@color/primary_600"
+            android:maxLines="2"
+            android:ellipsize="end"
+            tools:text="Chest, shoulders and triceps focused workout routine"
+            app:layout_constraintEnd_toStartOf="@+id/favorite_button"
+            app:layout_constraintStart_toEndOf="@+id/workout_icon"
+            app:layout_constraintTop_toBottomOf="@+id/workout_name" />
+
+        <!-- Favorite Button -->
+        <ImageView
+            android:id="@+id/favorite_button"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_favorite_border"
+            android:tint="@color/primary_600"
+            android:contentDescription="@string/toggle_favorite"
+            android:padding="2dp"
+            app:layout_constraintBottom_toBottomOf="@+id/workout_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/workout_icon" />
+
+        <!-- Menu Button -->
+        <ImageButton
+            android:id="@+id/menu_button"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_more_vert"
+            android:tint="@color/primary_500"
+            android:contentDescription="Menu"
+            android:padding="2dp"
+            app:layout_constraintBottom_toBottomOf="@+id/favorite_button"
+            app:layout_constraintEnd_toStartOf="@+id/favorite_button"
+            app:layout_constraintTop_toTopOf="@+id/favorite_button"
+            android:layout_marginEnd="8dp" />
+
+        <!-- Exercise Count and Last Modified -->
+        <TextView
+            android:id="@+id/exercise_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:textSize="12sp"
+            android:textColor="@color/primary_500"
+            android:drawablePadding="4dp"
+            app:drawableStartCompat="@drawable/ic_fitness_center"
+            app:drawableTint="@color/primary_500"
+            tools:text="5 exercises"
+            app:layout_constraintStart_toEndOf="@+id/workout_icon"
+            app:layout_constraintTop_toBottomOf="@+id/workout_description" />
+
+        <TextView
+            android:id="@+id/last_modified"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textSize="12sp"
+            android:textColor="@color/primary_500"
+            android:drawablePadding="4dp"
+            app:drawableStartCompat="@drawable/ic_schedule"
+            app:drawableTint="@color/primary_500"
+            tools:text="2 days ago"
+            app:layout_constraintBaseline_toBaselineOf="@+id/exercise_count"
+            app:layout_constraintStart_toEndOf="@+id/exercise_count" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

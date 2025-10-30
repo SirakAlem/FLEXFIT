@@ -1,0 +1,123 @@
+<resources>
+    <string name="app_name">FlexFit</string>
+    
+    <!-- Categories -->
+    <string name="choose_exercise_category">Choose Exercise Category</string>
+    <string name="category_icon">Category Icon</string>
+    
+    <string name="category_strength">Strength</string>
+    <string name="category_strength_desc">Exercises to build muscle strength</string>
+    
+    <string name="category_cardio">Cardio</string>
+    <string name="category_cardio_desc">Cardiovascular and endurance exercises</string>
+    
+    <string name="category_stretching">Stretching</string>
+    <string name="category_stretching_desc">Flexibility and mobility exercises</string>
+    
+    <string name="category_powerlifting">Powerlifting</string>
+    <string name="category_powerlifting_desc">Weight lifting and maximum strength</string>
+    
+    <string name="category_strongman">Strongman</string>
+    <string name="category_strongman_desc">Functional strength exercises</string>
+    
+    <string name="category_plyometrics">Plyometrics</string>
+    <string name="category_plyometrics_desc">Explosive and power exercises</string>
+    
+    <!-- Exercises -->
+    <string name="no_exercises_found">No exercises found</string>
+    <string name="toggle_favorite">Toggle favorite</string>
+    <string name="exercise_image">Exercise image</string>
+    <string name="target_muscles">Target Muscles</string>
+    <string name="instructions">Instructions</string>
+    
+    <!-- Exercise Detail -->
+    <string name="primary_muscles">Primary:</string>
+    <string name="secondary_muscles">Secondary:</string>
+    <string name="level_beginner">Beginner</string>
+    <string name="level_intermediate">Intermediate</string>
+    <string name="level_expert">Expert</string>
+    <string name="equipment_none">Bodyweight</string>
+    
+    <!-- Workouts -->
+    <string name="my_workouts">My Workouts</string>
+    <string name="create_workout">Create Workout</string>
+    <string name="workout_name">Workout Name</string>
+    <string name="workout_description">Description (Optional)</string>
+    <string name="add_exercise">Add Exercise</string>
+    <string name="save_workout">Save Workout</string>
+    <string name="cancel">Cancel</string>
+    <string name="start_workout">Start Workout</string>
+    <string name="no_workouts_found">No workouts found</string>
+    <string name="create_first_workout">Create your first workout</string>
+    <string name="exercises_count">%d exercises</string>
+    <string name="exercise_count_single">%d exercise</string>
+    <string name="created_time">Created %s</string>
+    
+    <!-- Workout Creation -->
+    <string name="please_enter_workout_name">Please enter workout name</string>
+    <string name="please_enter_workout_name_first">Please enter workout name first</string>
+    <string name="no_exercises_in_workout">No exercises in this workout</string>
+    <string name="empty_exercises_view">No exercises added yet</string>
+    
+    <!-- Exercise Settings Dialog -->
+    <string name="sets">Sets</string>
+    <string name="reps">Reps</string>
+    <string name="weight_kg">Weight (kg)</string>
+    <string name="rest_time_seconds">Rest time (seconds)</string>
+    <string name="add_exercise_button">Add Exercise</string>
+    <string name="update_exercise">Update Exercise</string>
+    <string name="please_enter_valid_values">Please enter valid values</string>
+    <string name="please_enter_valid_numbers">Please enter valid numbers</string>
+    <string name="added_to_workout">Added %s to workout</string>
+    <string name="updated_exercise">Updated %s</string>
+    
+    <!-- Workout Session -->
+    <string name="workout_session">Workout Session</string>
+    <string name="exercise_counter">Exercise %1$d of %2$d</string>
+    <string name="sets_info">%d sets</string>
+    <string name="reps_info">%d reps</string>
+    <string name="weight_info">%.1f kg</string>
+    <string name="current_set">Set %1$d of %2$d</string>
+    <string name="tap_complete_when_finished">Tap Complete when finished</string>
+    <string name="rest_between_sets">Rest between sets</string>
+    <string name="rest_time">Rest Time</string>
+    <string name="previous">Previous</string>
+    <string name="complete_set">Complete Set</string>
+    <string name="skip">Skip</string>
+    <string name="skip_rest">Skip Rest</string>
+    <string name="finish_workout">Finish Workout</string>
+    <string name="exercise_info">Exercise Info</string>
+    <string name="overall_progress">Overall Progress: %d%%</string>
+    <string name="workout_completed_title">Workout Completed!</string>
+    <string name="workout_completed_message">Congratulations! You\'ve completed your workout.</string>
+    <string name="finish">Finish</string>
+    <string name="finish_workout_early_title">Finish Workout</string>
+    <string name="finish_workout_early_message">Are you sure you want to finish this workout early?</string>
+    <string name="yes_finish">Yes, Finish</string>
+    <string name="continue_workout">Continue</string>
+    <string name="starting_workout">Starting workout...</string>
+    <string name="rest_time_format">%1$02d:%2$02d</string>
+    <string name="rest_seconds">%ds rest</string>
+    
+    <!-- Search -->
+    <string name="search_exercises">Search exercises</string>
+    <string name="search_hint">Search...</string>
+    
+    <!-- Toast Messages -->
+    <string name="removed_from_favorites">Removed from favorites</string>
+    <string name="edit_exercise_toast">Edit: %s</string>
+    
+    <!-- Adapter strings -->
+    <string name="not_specified">Not specified</string>
+    <string name="various_muscles">Various muscles</string>
+    
+    <!-- Common -->
+    <string name="loading">Loading...</string>
+    <string name="error_network">Network error</string>
+    <string name="error_generic">An error occurred</string>
+    <string name="retry">Retry</string>
+    <string name="ok">OK</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    
+</resources>

@@ -1,0 +1,30 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    
+    <!-- Logo con braccia muscolose centrato -->
+    <group android:scaleX="0.15"
+           android:scaleY="0.15"
+           android:pivotX="54"
+           android:pivotY="54"
+           android:translateX="54"
+           android:translateY="54">
+        
+        <!-- Braccio sinistro arancione -->
+        <path
+            android:fillColor="#ff6b35"
+            android:pathData="M-125,-50 C-125,-70 -110,-85 -90,-85 C-70,-85 -55,-70 -55,-50 C-55,-30 -70,-15 -90,-15 L-90,0 C-90,20 -75,35 -55,35 C-35,35 -20,20 -20,0 L-20,-25 C-20,-45 -35,-60 -55,-60 C-75,-60 -90,-45 -90,-25 L-90,-50 C-110,-50 -125,-35 -125,-15 C-125,5 -110,20 -90,20 L-70,20 L-70,40 C-70,60 -55,75 -35,75 C-15,75 0,60 0,40 L0,-75 C0,-95 -15,-110 -35,-110 C-55,-110 -70,-95 -70,-75 L-70,-50 Z" />
+        
+        <!-- Braccio destro grigio scuro -->
+        <path
+            android:fillColor="#322f30"
+            android:pathData="M125,-50 C125,-70 110,-85 90,-85 C70,-85 55,-70 55,-50 C55,-30 70,-15 90,-15 L90,0 C90,20 75,35 55,35 C35,35 20,20 20,0 L20,-25 C20,-45 35,-60 55,-60 C75,-60 90,-45 90,-25 L90,-50 C110,-50 125,-35 125,-15 C125,5 110,20 90,20 L70,20 L70,40 C70,60 55,75 35,75 C15,75 0,60 0,40 L0,-75 C0,-95 15,-110 35,-110 C55,-110 70,-95 70,-75 L70,-50 Z" />
+        
+        <!-- Divisore centrale -->
+        <path
+            android:fillColor="#ffffff"
+            android:pathData="M-5,-110 L5,-110 L5,75 L-5,75 Z" />
+    </group>
+</vector>

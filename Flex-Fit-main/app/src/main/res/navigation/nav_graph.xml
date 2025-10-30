@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/categoriesFragment">
+
+    <fragment
+        android:id="@+id/categoriesFragment"
+        android:name="it.unimib.flexfit.ui.fragment.CategoriesFragment"
+        android:label="@string/choose_exercise_category"
+        tools:layout="@layout/fragment_categories">
+        
+        <action
+            android:id="@+id/action_categories_to_exercises"
+            app:destination="@id/exerciseListFragment" />
+        <action
+            android:id="@+id/action_categories_to_favorites"
+            app:destination="@id/favoritesFragment" />
+        <action
+            android:id="@+id/action_categories_to_detail"
+            app:destination="@id/exerciseDetailFragment" />
+        <action
+            android:id="@+id/action_categories_to_workouts"
+            app:destination="@id/myWorkoutsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/exerciseListFragment"
+        android:name="it.unimib.flexfit.ui.fragment.ExerciseListFragment"
+        android:label="{category_name}"
+        tools:layout="@layout/fragment_exercise_list">
+        
+        <argument
+            android:name="category_id"
+            app:argType="string" />
+        <argument
+            android:name="category_name"
+            app:argType="string" />
+            
+        <action
+            android:id="@+id/action_exercises_to_detail"
+            app:destination="@id/exerciseDetailFragment" />
+        <action
+            android:id="@+id/action_exercises_to_favorites"
+            app:destination="@id/favoritesFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/exerciseDetailFragment"
+        android:name="it.unimib.flexfit.ui.fragment.ExerciseDetailFragment"
+        android:label="{exercise_name}"
+        tools:layout="@layout/fragment_exercise_detail">
+        
+        <argument
+            android:name="exercise_id"
+            app:argType="string" />
+        <argument
+            android:name="exercise_name"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_detail_to_favorites"
+            app:destination="@id/favoritesFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/favoritesFragment"
+        android:name="it.unimib.flexfit.ui.fragment.FavoritesFragment"
+        android:label="My Favorites"
+        tools:layout="@layout/fragment_favorites">
+        
+        <action
+            android:id="@+id/action_favorites_to_detail"
+            app:destination="@id/exerciseDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/myWorkoutsFragment"
+        android:name="it.unimib.flexfit.ui.fragment.MyWorkoutsFragment"
+        android:label="My Workouts"
+        tools:layout="@layout/fragment_my_workouts">
+        
+        <action
+            android:id="@+id/action_workouts_to_create_workout"
+            app:destination="@id/createWorkoutFragment" />
+        <action
+            android:id="@+id/action_workouts_to_workout_detail"
+            app:destination="@id/workoutDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/createWorkoutFragment"
+        android:name="it.unimib.flexfit.ui.fragment.CreateWorkoutFragment"
+        android:label="Create Workout"
+        tools:layout="@layout/fragment_create_workout">
+        
+        <argument
+            android:name="workout_id"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="edit_mode"
+            app:argType="boolean"
+            android:defaultValue="false" />
+            
+        <action
+            android:id="@+id/action_create_workout_to_add_exercise"
+            app:destination="@id/addExerciseToWorkoutFragment" />
+        <action
+            android:id="@+id/action_to_exercise_detail"
+            app:destination="@id/exerciseDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addExerciseToWorkoutFragment"
+        android:name="it.unimib.flexfit.ui.fragment.AddExerciseToWorkoutFragment"
+        android:label="Add Exercise"
+        tools:layout="@layout/fragment_add_exercise_to_workout">
+        
+        <argument
+            android:name="workout_id"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/workoutDetailFragment"
+        android:name="it.unimib.flexfit.ui.fragment.WorkoutDetailFragment"
+        android:label="{workout_name}"
+        tools:layout="@layout/fragment_workout_detail">
+        
+        <argument
+            android:name="workout_id"
+            app:argType="string" />
+        <argument
+            android:name="workout_name"
+            app:argType="string" />
+            
+        <action
+            android:id="@+id/action_workout_detail_to_exercise_detail"
+            app:destination="@id/exerciseDetailFragment" />
+        <action
+            android:id="@+id/action_workout_detail_to_session"
+            app:destination="@id/workoutSessionFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/workoutSessionFragment"
+        android:name="it.unimib.flexfit.ui.fragment.WorkoutSessionFragment"
+        android:label="Workout Session"
+        tools:layout="@layout/fragment_workout_session">
+        
+        <argument
+            android:name="workout_id"
+            app:argType="string" />
+            
+        <action
+            android:id="@+id/action_workout_session_to_exercise_detail"
+            app:destination="@id/exerciseDetailFragment" />
+    </fragment>
+
+</navigation>

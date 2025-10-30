@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "267924265027",
+    "project_id": "flexfit-b7a30",
+    "storage_bucket": "flexfit-b7a30.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:267924265027:android:f2ec4646ab33714c9edcf6",
+        "android_client_info": {
+          "package_name": "it.unimib.flexfit"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4m2sXwQ6VfrVBsEOospZh8nY9OcjtQ0I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

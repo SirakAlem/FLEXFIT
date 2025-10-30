@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <!-- Background bianco -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#FFFFFF" />
+        </shape>
+    </item>
+    
+    <!-- FlexFit Logo centered -->
+    <item
+        android:drawable="@drawable/ic_flexfit_logo_real"
+        android:gravity="center" />
+
+</layer-list>

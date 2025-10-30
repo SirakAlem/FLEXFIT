@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_50">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        tools:context=".ui.fragment.CreateWorkoutFragment">
+
+        <!-- Header -->
+        <TextView
+            android:id="@+id/title_create_workout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create Workout"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/primary_800"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Workout Info Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_workout_info"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/primary_200"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_create_workout">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Workout Name -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_workout_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Workout Name"
+                    app:startIconDrawable="@drawable/ic_fitness_center">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_workout_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textCapSentences"
+                        android:maxLines="1" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Workout Description -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_workout_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:hint="Description (optional)"
+                    app:startIconDrawable="@drawable/ic_description">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_workout_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textCapSentences|textMultiLine"
+                        android:maxLines="3" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Exercises Section -->
+        <TextView
+            android:id="@+id/exercises_section_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Exercises"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/primary_800"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_workout_info" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_add_exercise"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Exercise"
+            android:textColor="@color/colorPrimary"
+            app:icon="@drawable/ic_add"
+            app:iconTint="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/exercises_section_title" />
+
+        <!-- Exercises List -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_workout_exercises"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:nestedScrollingEnabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/exercises_section_title"
+            tools:itemCount="3"
+            tools:listitem="@layout/item_workout_exercise" />
+
+        <!-- Empty Exercises State -->
+        <LinearLayout
+            android:id="@+id/empty_exercises_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="32dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/exercises_section_title">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginBottom="16dp"
+                android:src="@drawable/ic_fitness_center"
+                android:tint="@color/primary_300"
+                android:contentDescription="No exercises" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No exercises yet"
+                android:textSize="16sp"
+                android:textColor="@color/primary_600"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tap 'Add Exercise' to start building your workout"
+                android:textSize="14sp"
+                android:textColor="@color/primary_500"
+                android:textAlignment="center"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <!-- Action Buttons -->
+        <LinearLayout
+            android:id="@+id/action_buttons"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:orientation="horizontal"
+            android:gravity="end"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recycler_workout_exercises">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_cancel"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="Cancel"
+                android:textColor="@color/primary_600" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_save_workout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save Workout"
+                android:textColor="@android:color/white"
+                app:backgroundTint="@color/colorPrimary" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

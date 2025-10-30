@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp"
+    app:strokeWidth="1dp"
+    app:strokeColor="@color/primary_200">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:gravity="center_vertical"
+        android:minHeight="56dp">
+
+        <!-- Drag Handle -->
+        <ImageView
+            android:id="@+id/drag_handle"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_drag_handle"
+            android:tint="@color/primary_400"
+            android:contentDescription="Drag to reorder"
+            android:layout_marginEnd="12dp" />
+
+        <!-- Exercise Content -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginEnd="8dp">
+
+            <!-- Exercise Name -->
+            <TextView
+                android:id="@+id/exercise_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary_800"
+                android:maxLines="2"
+                android:ellipsize="end"
+                tools:text="Hip Assisted Pull-Up" />
+
+            <!-- Weight and Rest Time Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="4dp"
+                android:gravity="start|center_vertical">
+
+                <!-- Weight Info -->
+                <TextView
+                    android:id="@+id/weight_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="@color/primary_500"
+                    android:visibility="gone"
+                    tools:text="15 kg"
+                    tools:visibility="visible" />
+
+                <!-- Rest Time -->
+                <TextView
+                    android:id="@+id/rest_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:textSize="12sp"
+                    android:textColor="@color/primary_500"
+                    android:drawablePadding="4dp"
+                    app:drawableStartCompat="@drawable/ic_timer"
+                    app:drawableTint="@color/primary_500"
+                    tools:text="60s rest" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Sets/Reps/Weight Info -->
+        <TextView
+            android:id="@+id/sets_reps_weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/primary_600"
+            android:background="@drawable/rounded_background"
+            android:backgroundTint="@color/primary_100"
+            android:padding="6dp"
+            android:layout_marginEnd="8dp"
+            tools:text="3 × 12" />
+
+        <!-- Menu Button -->
+        <ImageButton
+            android:id="@+id/menu_exercise"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_more_vert"
+            android:tint="@color/primary_600"
+            android:contentDescription="Exercise options" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

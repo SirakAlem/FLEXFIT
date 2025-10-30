@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FF6B35</color>
+    <color name="colorPrimaryDark">#E55A2B</color>
+    <color name="colorAccent">#FFA726</color>
+    
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    
+    <!-- Material Design Colors -->
+    <color name="primary_50">#FFF3E0</color>
+    <color name="primary_100">#FFE0B2</color>
+    <color name="primary_200">#FFCC80</color>
+    <color name="primary_300">#FFB74D</color>
+    <color name="primary_400">#FFA726</color>
+    <color name="primary_500">#FF9800</color>
+    <color name="primary_600">#FB8C00</color>
+    <color name="primary_700">#F57C00</color>
+    <color name="primary_800">#EF6C00</color>
+    <color name="primary_900">#E65100</color>
+</resources>
